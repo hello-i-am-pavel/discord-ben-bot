@@ -1,0 +1,22 @@
+{
+  "clientId": "959484938841890817",
+  "guildId": "876543210987654321",
+  "token": "OTU5NDg0OTM4ODQxODkwODE3.Ykcj-w.gPVtQw8kbFoG0ISlJOZL3SzD8Jc",
+  "cfg": {
+    "intents": [
+      "GUILDS",
+      "GUILD_BANS",
+      "GUILD_EMOJIS_AND_STICKERS",
+      "GUILD_INTEGRATIONS",
+      "GUILD_WEBHOOKS",
+      "GUILD_INVITES",
+      "GUILD_VOICE_STATES",
+      "GUILD_MESSAGES",
+      "GUILD_MESSAGE_REACTIONS",
+      "GUILD_MESSAGE_TYPING",
+      "DIRECT_MESSAGES",
+      "DIRECT_MESSAGE_REACTIONS",
+      "DIRECT_MESSAGE_TYPING"
+    ]
+  }
+}
