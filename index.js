@@ -28,17 +28,17 @@ const phrases = {
 const getNewAudioResource = (filename) => createAudioResource(filename);
 
 const getRandomAnswer = () => {
-    const answers = [
-        'hohoho',
-        'no',
-        'yes',
-    ];
+    let answer = Math.random();
 
-    if (Math.random() < 0.1) {
+    if (answer < 0.10) {
         return 'hanging';
+    } else if (answer < 0.45) {
+        return 'no';
+    } else if (answer < 0.80) {
+        return 'yes';
+    } else {
+        return 'hohoho';
     }
-
-    return answers.sort(() => Math.random() - 0.5).shift();
 }
 
 client.voiceManager = new Collection();
@@ -48,10 +48,15 @@ client.on('messageCreate', async (message) => {
         return;
     }
 
-    await message.react('☎');
-
     let memberVoiceState = message.member.voice;
     let voiceChannel = memberVoiceState.channel;
+
+    if (!memberVoiceState || !voiceChannel) {
+        await message.reply('Я могу отвечать на вызов только в голосовом канале');
+        return;
+    }
+
+    await message.react('☎');
 
     const connection = joinVoiceChannel({
         channelId: voiceChannel.id,
