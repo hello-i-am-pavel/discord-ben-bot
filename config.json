@@ -1,7 +1,42 @@
 {
-  "clientId": "959484938841890817",
-  "guildId": "876543210987654321",
-  "token": "OTU5NDg0OTM4ODQxODkwODE3.Ykcj-w.gPVtQw8kbFoG0ISlJOZL3SzD8Jc",
+  "debug": true,
+  "clientId": "",
+  "token": "",
+  "startCommand": "ben",
+  "messages": {
+    "reactionStart": "☎",
+    "replyUserNotInVoiceChannel": "Я могу отвечать на вызов только в голосовом канале",
+    "replyNowInChannel": "Я уже подключен к каналу"
+  },
+  "voice": {
+    "start": [
+      {
+        "filename": "phonering"
+      },
+      {
+        "filename": "ben"
+      }
+    ],
+    "random": [
+      {
+        "filename": "yes",
+        "chance": 10
+      },
+      {
+        "filename": "no",
+        "chance": 10
+      },
+      {
+        "filename": "hohoho",
+        "chance": 10
+      },
+      {
+        "filename": "hanging",
+        "chance": 10,
+        "event": "cancelCall"
+      }
+    ]
+  },
   "cfg": {
     "intents": [
       "GUILDS",
